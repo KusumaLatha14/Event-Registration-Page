@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Event Invitation</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="container" role="main" aria-live="polite" aria-atomic="true">
+
+    <div id="progress" aria-label="Event invitation progress">
+      <div class="dot active" id="dot-1"></div>
+      <div class="dot" id="dot-2"></div>
+      <div class="dot" id="dot-3"></div>
+      <div class="dot" id="dot-4"></div>
+    </div>
+
+    <!-- Step 1: Event Name -->
+    <section class="step active" id="step-1">
+      <h1 id="event-name">Spring Blossom Festival 2024</h1>
+      <button type="button" id="to-step-2" aria-label="View event details">View Details</button>
+    </section>
+
+    <!-- Step 2: Event Details -->
+    <section class="step" id="step-2">
+      <h2>Event Details</h2>
+      <p><strong>Date:</strong> April 10, 2024</p>
+      <p><strong>Time:</strong> 2:00 PM - 7:00 PM</p>
+      <p><strong>Location:</strong> Central Park Pavilion, NY</p>
+      <p>Celebrate the arrival of spring with live music, food trucks, artisan markets, and family-friendly activities.</p>
+      <button type="button" id="to-step-3" aria-label="Register for event">Register Now</button>
+    </section>
+
+    <!-- Step 3: Registration Form -->
+    <section class="step" id="step-3">
+      <h2>Register for the Event</h2>
+      <form id="registration-form" novalidate>
+        <label for="full-name">Full Name</label>
+        <input type="text" id="full-name" name="fullName" placeholder="Your full name" required aria-required="true" />
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required aria-required="true" />
+        <button type="submit" aria-label="Submit registration">Submit</button>
+      </form>
+    </section>
+
+    <!-- Step 4: Confirmation -->
+    <section class="step" id="step-4" tabindex="0" aria-live="assertive" aria-atomic="true">
+      <h2>Thank You for Registering!</h2>
+      <p id="confirm-message"></p>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
